@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://haoliuwide.github.io">
   <title>hexo添加分类功能 | MEM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="​    Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。 1.生成（文章）时默认生成categories配置项修改post模板1hexo new &quot;新建的一篇博客&quot;  ​    新建文章时，默认使用 ~Blog/scaffolds/post.md 模板。为了使新建文章时默认生成categories项，在post.md文件最后一行添加categories。">
+  <meta name="description" content="Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo添加分类功能">
 <meta property="og:url" content="https://haoliuwide.github.io/2019/08/20/hexo添加分类功能/index.html">
 <meta property="og:site_name" content="MEM">
-<meta property="og:description" content="​    Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。 1.生成（文章）时默认生成categories配置项修改post模板1hexo new &quot;新建的一篇博客&quot;  ​    新建文章时，默认使用 ~Blog/scaffolds/post.md 模板。为了使新建文章时默认生成categories项，在post.md文件最后一行添加categories。">
+<meta property="og:description" content="Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-21T07:26:16.918Z">
+<meta property="og:updated_time" content="2019-08-21T09:29:25.995Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo添加分类功能">
-<meta name="twitter:description" content="​    Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。 1.生成（文章）时默认生成categories配置项修改post模板1hexo new &quot;新建的一篇博客&quot;  ​    新建文章时，默认使用 ~Blog/scaffolds/post.md 模板。为了使新建文章时默认生成categories项，在post.md文件最后一行添加categories。">
+<meta name="twitter:description" content="Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。">
   
     <link rel="alternative" href="/atom.xml" title="MEM" type="application/atom+xml">
   
@@ -187,12 +187,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>​    Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。</p>
+        <p>Hexo自带有归档功能categories，不过要先对配置文件进行一些修改。</p>
+<a id="more"></a>
+
 <h1 id="1-生成（文章）时默认生成categories配置项"><a href="#1-生成（文章）时默认生成categories配置项" class="headerlink" title="1.生成（文章）时默认生成categories配置项"></a>1.生成（文章）时默认生成categories配置项</h1><h2 id="修改post模板"><a href="#修改post模板" class="headerlink" title="修改post模板"></a>修改post模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"新建的一篇博客"</span></span><br></pre></td></tr></table></figure>
 
 <p>​    新建文章时，默认使用 ~Blog/scaffolds/post.md 模板。为了使新建文章时默认生成categories项，在post.md文件最后一行添加categories。</p>
-<a id="more"></a>
-
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">categoties:</span><br></pre></td></tr></table></figure>
 
 <h1 id="2-在博客侧边栏展示分类"><a href="#2-在博客侧边栏展示分类" class="headerlink" title="2.在博客侧边栏展示分类"></a>2.在博客侧边栏展示分类</h1><h2 id="在主题配置文件中添加分类选项"><a href="#在主题配置文件中添加分类选项" class="headerlink" title="在主题配置文件中添加分类选项"></a>在主题配置文件中添加分类选项</h2><p>​    在主题配置文件<code>~/Blog/themes/yilia（主题目录）/_config.yml</code>中添加以下代码（#号后为注释内容）:</p>
