@@ -6,27 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://haoliuwide.github.io">
-  <title>hexo的主题配置 | MEM</title>
+  <title>用python的seek和truncate函数去除txt文件末尾的换行符 | MEM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.yilia主题下载">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="0.解决方案">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo的主题配置">
-<meta property="og:url" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/index.html">
+<meta property="og:title" content="用python的seek和truncate函数去除txt文件末尾的换行符">
+<meta property="og:url" content="https://haoliuwide.github.io/2019/09/08/用python的seek和truncate函数去除txt文件末尾的换行符/index.html">
 <meta property="og:site_name" content="MEM">
-<meta property="og:description" content="1.yilia主题下载">
+<meta property="og:description" content="0.解决方案">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/1.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/2.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/3.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/4.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/5.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/6.png">
-<meta property="og:updated_time" content="2019-08-21T12:42:50.489Z">
+<meta property="og:updated_time" content="2019-09-08T12:14:59.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo的主题配置">
-<meta name="twitter:description" content="1.yilia主题下载">
-<meta name="twitter:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/1.png">
+<meta name="twitter:title" content="用python的seek和truncate函数去除txt文件末尾的换行符">
+<meta name="twitter:description" content="0.解决方案">
   
     <link rel="alternative" href="/atom.xml" title="MEM" type="application/atom+xml">
   
@@ -174,90 +167,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo的主题配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-用python的seek和truncate函数去除txt文件末尾的换行符" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo的主题配置
+      用python的seek和truncate函数去除txt文件末尾的换行符
     </h1>
   
 
         
-        <a href="/2019/08/20/hexo的主题配置/" class="archive-article-date">
-  	<time datetime="2019-08-20T12:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+        <a href="/2019/09/08/用python的seek和truncate函数去除txt文件末尾的换行符/" class="archive-article-date">
+  	<time datetime="2019-09-08T11:38:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-yilia主题下载"><a href="#1-yilia主题下载" class="headerlink" title="1.yilia主题下载"></a>1.yilia主题下载</h1><a id="more"></a>
+        <h2 id="0-解决方案"><a href="#0-解决方案" class="headerlink" title="0.解决方案"></a>0.解决方案</h2><a id="more"></a>
 
-<p>​    下载yilia主题，保存到blog/themes下。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/Blog</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"test.txt"</span>, <span class="string">'rb+'</span>) <span class="keyword">as</span> f:</span><br><span class="line">	f.seek(<span class="number">-2</span>,<span class="number">2</span>)</span><br><span class="line">	f.truncate()</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-站点配置文件修改"><a href="#2-站点配置文件修改" class="headerlink" title="2.站点配置文件修改"></a>2.站点配置文件修改</h1><h2 id="2-1-修改主题theme"><a href="#2-1-修改主题theme" class="headerlink" title="2.1 修改主题theme"></a>2.1 修改主题theme</h2><p>​    hexo博客的站点配置文件是_config.yml,路径就在 ~/Blog，将 其中的theme：lanscope 修改为 theme：yilia。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/Blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
+<h2 id="1-truncate-函数"><a href="#1-truncate-函数" class="headerlink" title="1. truncate 函数"></a>1. truncate 函数</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p><strong>truncate()</strong> 方法用于截断文件，如果指定了可选参数 size，则表示截断文件为 size 个字符。 如果没有指定 size，则从当前位置起截断；截断之后 size 后面的所有字符被删除。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fileObject.truncate( [ size ])</span><br></pre></td></tr></table></figure>
 
-<p><img src="1.png" alt></p>
-<h2 id="2-2-其他"><a href="#2-2-其他" class="headerlink" title="2.2 其他"></a>2.2 其他</h2><table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>title</code></td>
-<td align="left">网站标题</td>
-</tr>
-<tr>
-<td align="center"><code>subtitle</code></td>
-<td align="left">网站副标题（不积跬步，无以至千里）</td>
-</tr>
-<tr>
-<td align="center"><code>description</code></td>
-<td align="left">网站描述</td>
-</tr>
-<tr>
-<td align="center"><code>keywords</code></td>
-<td align="left">网站的关键词。使用半角逗号 <code>,</code> 分隔多个关键词。</td>
-</tr>
-<tr>
-<td align="center"><code>author</code></td>
-<td align="left">您的名字</td>
-</tr>
-<tr>
-<td align="center"><code>language</code></td>
-<td align="left">网站使用的语言（zh-CN：中文，en：英文）</td>
-</tr>
-<tr>
-<td align="center"><code>timezone</code></td>
-<td align="left">网站时区。默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
-</tr>
-</tbody></table>
-<p>其中，<code>description</code>主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。<code>author</code>参数用于主题显示文章的作者。更多详情，可通过<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">HEXO文档</a>查询。</p>
-<p><img src="2.png" alt></p>
-<h1 id="3-主题配置文件修改"><a href="#3-主题配置文件修改" class="headerlink" title="3.主题配置文件修改"></a>3.主题配置文件修改</h1><p>​    主题yilia的配置文件是~/Blog/themes/yilia/_config.yml</p>
-<h2 id="3-1-修改主题头像"><a href="#3-1-修改主题头像" class="headerlink" title="3.1 修改主题头像"></a>3.1 修改主题头像</h2><p>​    将自己心爱的图片设置为头像，只需两步。</p>
-<p><img src="3.png" alt></p>
-<h3 id="3-1-1-将图片放到-Blog-themes-yilia-source-img目录下"><a href="#3-1-1-将图片放到-Blog-themes-yilia-source-img目录下" class="headerlink" title="3.1.1 将图片放到~/Blog/themes/yilia/source/img目录下"></a>3.1.1 将图片放到~/Blog/themes/yilia/source/img目录下</h3><p><img src="4.png" alt></p>
-<h3 id="3-1-2-修改配置文件"><a href="#3-1-2-修改配置文件" class="headerlink" title="3.1.2 修改配置文件"></a>3.1.2 修改配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/Blog</span><br><span class="line">$ vim themes/yilia/_config.yml</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p><strong>size</strong> ：可选，如果存在则文件截断为 size 字节。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>该方法没有返回值。</p>
+<h2 id="2-seek函数"><a href="#2-seek函数" class="headerlink" title="2. seek函数"></a>2. seek函数</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p><strong>seek()</strong> 方法用于移动文件读取指针到指定位置。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fileObject.seek(offset[, whence])</span><br></pre></td></tr></table></figure>
 
-<p>​    将 avatar: 修改为 avatar: img/Lux.png</p>
-<p><img src="5.png" alt></p>
-<h2 id="3-2-Problem"><a href="#3-2-Problem" class="headerlink" title="3.2 Problem"></a>3.2 Problem</h2><p>​     用上述方法会出现，主页头像显示正常，但进入到博客文章内头像会挂掉的情况。<a href="https://github.com/kariyyahm" target="_blank" rel="noopener">Kari Wang </a>issue了这个问题，给出了以下解决方案：</p>
-<h3 id="3-2-1-Blog-resource下新建img文件夹，放入头像图片。"><a href="#3-2-1-Blog-resource下新建img文件夹，放入头像图片。" class="headerlink" title="3.2.1.Blog/resource下新建img文件夹，放入头像图片。"></a>3.2.1.Blog/resource下新建img文件夹，放入头像图片。</h3><h3 id="3-2-2-将-avatar-修改为-avatar-img-Lux-png"><a href="#3-2-2-将-avatar-修改为-avatar-img-Lux-png" class="headerlink" title="3.2.2.将 avatar: 修改为 avatar: /img/Lux.png"></a>3.2.2.将 avatar: 修改为 avatar: /img/Lux.png</h3><p>​    注意img前多了个 /，我尝试不要这个/，发现主页，文章内头像均不能正常显示。我猜测img文件夹在/目录下。</p>
-<h2 id="3-3-最终的方案"><a href="#3-3-最终的方案" class="headerlink" title="3.3 最终的方案"></a>3.3 最终的方案</h2><h3 id="3-3-1-将图片放到-Blog-themes-yilia-source-img目录下"><a href="#3-3-1-将图片放到-Blog-themes-yilia-source-img目录下" class="headerlink" title="3.3.1 将图片放到~/Blog/themes/yilia/source/img目录下"></a>3.3.1 将图片放到~/Blog/themes/yilia/source/img目录下</h3><h3 id="3-3-2-将-avatar-修改为-avatar-img-Lux-png"><a href="#3-3-2-将-avatar-修改为-avatar-img-Lux-png" class="headerlink" title="3.3.2.将 avatar: 修改为 avatar: /img/Lux.png"></a>3.3.2.将 avatar: 修改为 avatar: /img/Lux.png</h3><p>​        不需要在Blog/resource下新建img文件夹，其实hexo g 生成的文件为/img/Lux.png,它和放在yilia/source/img/Lux.png一致。而最终方案和3.1的区别看起来只是一个/，其实是相对路径和绝对路径的区别。在博客首页时，工作路径在/，所以无论绝对路径还是相对路径均可以正常显示。而点击其他page后，工作路径发生了变化，使得img/Lux.png这种方式失效了，/img/Lux.png的方式却能正确加载。</p>
-<h1 id="4-主题css文件修改"><a href="#4-主题css文件修改" class="headerlink" title="4.主题css文件修改"></a>4.主题css文件修改</h1><p>​    yilia主题的网页布局和~\Blog\themes\yilia\source\main.0cf68a.css 有关，因此可以配合浏览器的f12调试功能来修改该文件，获得想要的定义布局。这里我调整了侧边栏文字块之间的距离，在.left-col #header .header-menu {…}里添加了margin-top: 30px;  margin-bottom: 40px;</p>
-<p><img src="6.png" alt> </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.left-col <span class="comment">#header .header-menu &#123;</span></span><br><span class="line">  font-weight: 300;</span><br><span class="line">  line-height: 31px;</span><br><span class="line">  text-transform: uppercase;</span><br><span class="line">  <span class="built_in">float</span>: none;</span><br><span class="line">  min-height: 150px;</span><br><span class="line">  margin-top: 30px;                  <span class="comment"># 和”不积跬步，无以至千里“间隔30px</span></span><br><span class="line">  margin-bottom: 40px;				 <span class="comment">#  和”所有文章/友链/关于我“间隔40px				</span></span><br><span class="line">  margin-left: -12px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  -webkit-box-orient: horizontal;</span><br><span class="line">  -webkit-box-pack: center;</span><br><span class="line">  -webkit-box-align: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><p><strong>offset</strong> : 开始的偏移量，也就是代表需要移动偏移的字节数</p>
+<p><strong>whence：</strong>可选，默认值为 0。给offset参数一个定义，表示要从哪个位置开始偏移；0代表从文件开头开始算起，1代表从当前位置开始算起，2代表从文件末尾算起。</p>
+<h3 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h3><p>如果操作成功，则返回新的文件位置，如果操作失败，则函数返回 -1。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>以下实例演示了 seek()方法的使用：</p>
+<h4 id="1-test文件内容如下-没有换行符-："><a href="#1-test文件内容如下-没有换行符-：" class="headerlink" title="1. test文件内容如下(没有换行符)："></a>1. test文件内容如下(没有换行符)：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">54321</span><br></pre></td></tr></table></figure>
 
-<h1 id="5-hexo三连"><a href="#5-hexo三连" class="headerlink" title="5.hexo三连"></a>5.hexo三连</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>运行如下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"test.txt"</span>, <span class="string">'rb+'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.seek(<span class="number">-3</span>, <span class="number">2</span>)</span><br><span class="line">        print(f.read(<span class="number">1</span>))</span><br><span class="line">        f.seek(<span class="number">-2</span>, <span class="number">2</span>)</span><br><span class="line">        print(f.read(<span class="number">1</span>))</span><br><span class="line">        f.seek(<span class="number">-1</span>, <span class="number">2</span>)</span><br><span class="line">        print(f.read(<span class="number">1</span>))</span><br><span class="line">        f.seek(<span class="number">0</span>, <span class="number">2</span>)</span><br><span class="line">        print(f.read(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 
+<p>输出为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">b'3'</span></span><br><span class="line"><span class="string">b'2'</span></span><br><span class="line"><span class="string">b'1'</span></span><br><span class="line"><span class="string">b''</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-test文件内容如下-有换行符-："><a href="#2-test文件内容如下-有换行符-：" class="headerlink" title="2. test文件内容如下(有换行符)："></a>2. test文件内容如下(有换行符)：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">54321</span><br></pre></td></tr></table></figure>
+
+<p>运行例一的代码：</p>
+<p>输出为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">b'1'</span></span><br><span class="line"><span class="string">b'\r'</span></span><br><span class="line"><span class="string">b'\n'</span></span><br><span class="line"><span class="string">b''</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ol>
+<li><a href="https://www.runoob.com/python/file-seek.html" target="_blank" rel="noopener">Python File seek() 方法</a></li>
+<li><a href="https://www.runoob.com/python/file-truncate.html" target="_blank" rel="noopener">Python File truncate() 方法</a></li>
+</ol>
 
       
 
@@ -292,7 +255,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -359,7 +322,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://haoliuwide.github.io/2019/08/20/hexo的主题配置/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://haoliuwide.github.io/2019/09/08/用python的seek和truncate函数去除txt文件末尾的换行符/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -373,18 +336,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/20/hexo添加分类功能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo添加分类功能
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/20/windows10下的hexo安装/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows下的hexo安装</div>
+    <a href="/2019/09/07/2019-09-07/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2019-09-07</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -411,7 +365,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-yilia主题下载"><span class="toc-number">1.</span> <span class="toc-text">1.yilia主题下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-站点配置文件修改"><span class="toc-number">2.</span> <span class="toc-text">2.站点配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-修改主题theme"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 修改主题theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-其他"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-主题配置文件修改"><span class="toc-number">3.</span> <span class="toc-text">3.主题配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-修改主题头像"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 修改主题头像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-将图片放到-Blog-themes-yilia-source-img目录下"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1 将图片放到~/Blog/themes/yilia/source/img目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-修改配置文件"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2 修改配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Problem"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Problem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Blog-resource下新建img文件夹，放入头像图片。"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1.Blog/resource下新建img文件夹，放入头像图片。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-将-avatar-修改为-avatar-img-Lux-png"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2.将 avatar: 修改为 avatar: /img/Lux.png</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-最终的方案"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 最终的方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-将图片放到-Blog-themes-yilia-source-img目录下"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 将图片放到~/Blog/themes/yilia/source/img目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-将-avatar-修改为-avatar-img-Lux-png"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2.将 avatar: 修改为 avatar: /img/Lux.png</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-主题css文件修改"><span class="toc-number">4.</span> <span class="toc-text">4.主题css文件修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-hexo三连"><span class="toc-number">5.</span> <span class="toc-text">5.hexo三连</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-解决方案"><span class="toc-number">1.</span> <span class="toc-text">0.解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-truncate-函数"><span class="toc-number">2.</span> <span class="toc-text">1. truncate 函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述"><span class="toc-number">2.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">2.2.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">2.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回值"><span class="toc-number">2.4.</span> <span class="toc-text">返回值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-seek函数"><span class="toc-number">3.</span> <span class="toc-text">2. seek函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#概述-1"><span class="toc-number">3.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法-1"><span class="toc-number">3.2.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数-1"><span class="toc-number">3.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回值-1"><span class="toc-number">3.4.</span> <span class="toc-text">返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-number">3.5.</span> <span class="toc-text">实例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-test文件内容如下-没有换行符-："><span class="toc-number">3.5.1.</span> <span class="toc-text">1. test文件内容如下(没有换行符)：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-test文件内容如下-有换行符-："><span class="toc-number">3.5.2.</span> <span class="toc-text">2. test文件内容如下(有换行符)：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料："><span class="toc-number">4.</span> <span class="toc-text">参考资料：</span></a></li></ol>
                     </div>
                 </span>
             </div>
