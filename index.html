@@ -164,6 +164,385 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/15/排序/">排序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/15/排序/" class="archive-article-date">
+  	<time datetime="2019-10-15T08:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一-交换排序"><a href="#一-交换排序" class="headerlink" title="一 交换排序"></a>一 交换排序</h1>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/15/排序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-error" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/30/error/">error</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/30/error/" class="archive-article-date">
+  	<time datetime="2019-09-30T05:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+
+<p>Leetcode 63 - 不同路径Ⅱ</p>
+<p>错误版本：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; obstacleGrid)</span> </span>&#123;</span><br><span class="line">	 <span class="keyword">if</span> (obstacleGrid.empty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	 <span class="keyword">int</span> m = obstacleGrid.size();</span><br><span class="line">	 <span class="keyword">int</span> n = obstacleGrid[<span class="number">0</span>].size();</span><br><span class="line">	 <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;&gt;dp(m, <span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;(n, <span class="number">0</span>));</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</span><br><span class="line">	 &#123;</span><br><span class="line">		 <span class="keyword">if</span> (obstacleGrid[i][<span class="number">0</span>] == <span class="number">1</span>) </span><br><span class="line">		 &#123;</span><br><span class="line">			 <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; m; j++)</span><br><span class="line">			 &#123;</span><br><span class="line">				 dp[j][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">			 &#125;</span><br><span class="line">			 <span class="keyword">break</span>;</span><br><span class="line">		 &#125; </span><br><span class="line">		 <span class="keyword">else</span> dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">	 &#123;</span><br><span class="line">		 <span class="keyword">if</span> (obstacleGrid[<span class="number">0</span>][i] == <span class="number">1</span>)</span><br><span class="line">		 &#123;</span><br><span class="line">			 <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)   <span class="comment">// j = i </span></span><br><span class="line">			 &#123;</span><br><span class="line">				 dp[<span class="number">0</span>][j] = <span class="number">0</span>;</span><br><span class="line">			 &#125;</span><br><span class="line">			 <span class="keyword">break</span>;</span><br><span class="line">		 &#125;</span><br><span class="line">		 <span class="keyword">else</span> dp[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i)</span><br><span class="line">	 &#123;</span><br><span class="line">		 <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; ++j)</span><br><span class="line">		 &#123;</span><br><span class="line">			 <span class="keyword">if</span> (obstacleGrid[i][j] == <span class="number">1</span>) dp[i][j] = <span class="number">0</span>;</span><br><span class="line">			 <span class="keyword">else</span> dp[i][j] = dp[i - <span class="number">1</span>][j] + dp[i][j - <span class="number">1</span>];</span><br><span class="line">		 &#125;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">return</span> dp[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>正确版本：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; obstacleGrid)</span> </span>&#123;</span><br><span class="line">	 <span class="keyword">if</span> (obstacleGrid.empty()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	 <span class="keyword">int</span> m = obstacleGrid.size();</span><br><span class="line">	 <span class="keyword">int</span> n = obstacleGrid[<span class="number">0</span>].size();</span><br><span class="line">	 <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;&gt;dp(m, <span class="built_in">vector</span>&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;(n, <span class="number">0</span>));</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i)</span><br><span class="line">	 &#123;</span><br><span class="line">		 <span class="keyword">if</span> (obstacleGrid[i][<span class="number">0</span>] == <span class="number">1</span>) <span class="keyword">break</span>；</span><br><span class="line">		 <span class="keyword">else</span> dp[i][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">	 &#123;</span><br><span class="line">		 <span class="keyword">if</span> (obstacleGrid[<span class="number">0</span>][i] == <span class="number">1</span>) <span class="keyword">break</span>;</span><br><span class="line">		 <span class="keyword">else</span> dp[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; ++i)</span><br><span class="line">	 &#123;</span><br><span class="line">		 <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; ++j)</span><br><span class="line">		 &#123;</span><br><span class="line">			 <span class="keyword">if</span> (obstacleGrid[i][j] == <span class="number">1</span>) dp[i][j] = <span class="number">0</span>;</span><br><span class="line">			 <span class="keyword">else</span> dp[i][j] = dp[i - <span class="number">1</span>][j] + dp[i][j - <span class="number">1</span>];</span><br><span class="line">		 &#125;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="keyword">return</span> dp[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">error</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/30/error/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-安装selenium-python-chrome" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/15/安装selenium-python-chrome/">安装selenium+python+chrome</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/15/安装selenium-python-chrome/" class="archive-article-date">
+  	<time datetime="2019-09-15T08:22:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>666666</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">selenium</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/15/安装selenium-python-chrome/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/13/字符串/">字符串</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/13/字符串/" class="archive-article-date">
+  	<time datetime="2019-09-13T07:00:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+
+
+
+<h2 id="1-1-字符串的旋转"><a href="#1-1-字符串的旋转" class="headerlink" title="1.1 字符串的旋转"></a>1.1 字符串的旋转</h2><h3 id="题目：单词翻转"><a href="#题目：单词翻转" class="headerlink" title="题目：单词翻转"></a>题目：单词翻转</h3><h3 id="说明：输入一个英文句子，翻转句子中单词的顺序。"><a href="#说明：输入一个英文句子，翻转句子中单词的顺序。" class="headerlink" title="说明：输入一个英文句子，翻转句子中单词的顺序。"></a>说明：输入一个英文句子，翻转句子中单词的顺序。</h3><h3 id="样例：“I-am-a-student-”-gt-“student-a-am-I”"><a href="#样例：“I-am-a-student-”-gt-“student-a-am-I”" class="headerlink" title="样例：“I am a student.”  -&gt; “student. a am I”"></a>样例：“I am a student.”  -&gt; “student. a am I”</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse_string</span><span class="params">(<span class="keyword">char</span>* s, <span class="keyword">int</span> from, <span class="keyword">int</span> to)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (from &lt; to)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">char</span> t = s[to];</span><br><span class="line">		s[to--] = s[from];</span><br><span class="line">		s[from++] = t;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse_sentense</span><span class="params">(<span class="keyword">char</span>* s,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> from = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> to = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (from &lt; n &amp;&amp; to &lt; n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (s[to] == <span class="string">' '</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			reverse_string(s, from, to - <span class="number">1</span>);</span><br><span class="line">			from = to + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (to == n - <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			reverse_string(s, from, to);</span><br><span class="line">			from = to + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		++to;</span><br><span class="line">	&#125;</span><br><span class="line">	reverse_string(s, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-字符串的包含"><a href="#1-2-字符串的包含" class="headerlink" title="1.2 字符串的包含"></a>1.2 字符串的包含</h2><h3 id="利用位运算把一个整数当作散列表。最多保存32个。"><a href="#利用位运算把一个整数当作散列表。最多保存32个。" class="headerlink" title="利用位运算把一个整数当作散列表。最多保存32个。"></a>利用位运算把一个整数当作散列表。最多保存32个。</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">string_contain</span><span class="params">(<span class="built_in">string</span> &amp;a, <span class="built_in">string</span> &amp;b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> hash = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		hash |= (<span class="number">1</span> &lt;&lt; (a[i]-<span class="string">'A'</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>((hash &amp;(<span class="number">1</span> &lt;&lt; (a[i]-<span class="string">'A'</span>))) == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="题目：变位词"><a href="#题目：变位词" class="headerlink" title="题目：变位词"></a>题目：变位词</h3><h3 id="说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。"><a href="#说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。" class="headerlink" title="说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。"></a>说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。</h3><h3 id="样例：“bad”-“abd”-为兄弟字符串"><a href="#样例：“bad”-“abd”-为兄弟字符串" class="headerlink" title="样例：“bad”  “abd” 为兄弟字符串"></a>样例：“bad”  “abd” 为兄弟字符串</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">brother_str</span><span class="params">(<span class="built_in">string</span>&amp; a, <span class="built_in">string</span>&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (a == b) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">int</span> alp[<span class="number">26</span>];</span><br><span class="line">	<span class="built_in">memset</span>(alp, <span class="number">0</span>, <span class="number">26</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length(); ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		alp[a[i] - <span class="string">'a'</span>] += <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; b.length(); ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		alp[b[i] - <span class="string">'A'</span>] -= <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (alp[b[i] - <span class="string">'A'</span>] &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-字符串的全排列"><a href="#1-3-字符串的全排列" class="headerlink" title="1.3 字符串的全排列"></a>1.3 字符串的全排列</h2><h3 id="题目：单词翻转-1"><a href="#题目：单词翻转-1" class="headerlink" title="题目：单词翻转"></a>题目：单词翻转</h3><h3 id="说明：输入一个英文句子，翻转句子中单词的顺序。-1"><a href="#说明：输入一个英文句子，翻转句子中单词的顺序。-1" class="headerlink" title="说明：输入一个英文句子，翻转句子中单词的顺序。"></a>说明：输入一个英文句子，翻转句子中单词的顺序。</h3><h3 id="样例：“I-am-a-student-”-gt-“student-a-am-I”-1"><a href="#样例：“I-am-a-student-”-gt-“student-a-am-I”-1" class="headerlink" title="样例：“I am a student.”  -&gt; “student. a am I”"></a>样例：“I am a student.”  -&gt; “student. a am I”</h3><h3 id="1-5-回文判断"><a href="#1-5-回文判断" class="headerlink" title="1.5 回文判断"></a>1.5 回文判断</h3><h4 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LinkNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">    LinkNode next;</span><br><span class="line">    explicit LinkNode(int d):data(d)&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getTheMid</span><span class="params">(LinkNode head)</span> </span>&#123;</span><br><span class="line">    LinkNode slow = head;</span><br><span class="line">    LinkNode fast = head;</span><br><span class="line">    <span class="keyword">while</span> (fast != null &amp;&amp; fast.next != null) &#123;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow.data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="本章习题"><a href="#本章习题" class="headerlink" title="本章习题"></a>本章习题</h3><h4 id="1-字符串反转"><a href="#1-字符串反转" class="headerlink" title="1. 字符串反转"></a>1. 字符串反转</h4><p>实现字符串反转函数。例如，”July”反转后变成”yluJ”。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse</span><span class="params">(<span class="built_in">string</span>&amp; s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> l = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> r = s.length()<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">while</span> (l &lt; r)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">char</span> t = s[l];</span><br><span class="line">		s[l++] = s[r];</span><br><span class="line">		s[r--] = t;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-字符的左右移动"><a href="#2-字符的左右移动" class="headerlink" title="2. 字符的左右移动"></a>2. 字符的左右移动</h4><p>给定一个字符串，这个字符串为*号和26个字母的任意组合。现在需要把字符串中的*号都移动到字符串的最左侧，而把字符串中的字母移到最右侧并保持相对顺序不变，要求时间复杂度和空间复杂度最小。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shift</span><span class="params">(<span class="built_in">string</span>&amp; s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> last = s.length()<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">int</span> cnt_star = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = last; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'*'</span>) ++cnt_star;</span><br><span class="line">		<span class="keyword">else</span> s[last--] = s[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; cnt_star; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		s[i] = <span class="string">'*'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-字符个数的统计"><a href="#3-字符个数的统计" class="headerlink" title="3. 字符个数的统计"></a>3. 字符个数的统计</h4><p>给定一个字符串，写一个函数，查找出该字符串中每个字符串出现的次数，要求区分大小写，且时间复杂度为$O(n)$。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">character_number_statistics</span><span class="params">(<span class="built_in">string</span>&amp; s, <span class="keyword">int</span> a[])</span> <span class="comment">//数组a的大小为52</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] &gt;= <span class="string">'a'</span> &amp;&amp; s[i] &lt;= <span class="string">'z'</span>) a[s[i] - <span class="string">'a'</span>] += <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (s[i] &gt;= <span class="string">'A'</span> &amp;&amp; s[i] &lt;= <span class="string">'Z'</span>) a[s[i] - <span class="string">'A'</span>+<span class="number">26</span>] += <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-字符串的匹配"><a href="#4-字符串的匹配" class="headerlink" title="4. 字符串的匹配"></a>4. 字符串的匹配</h4><p>在一篇英文文章中查找指定的人名，人名使用26个英文字母（可以使大写或小写）、空格及两个通配符（*和？）组成。例如，“J*Smi??”可以匹配“John Smith”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string find_name(string&amp; article,string&amp; s)</span><br><span class="line">&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/notes//" class="article-tag-list-link color1">notes</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/13/字符串/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-用python的seek和truncate函数去除txt文件末尾的换行符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -220,220 +599,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/08/用python的seek和truncate函数去除txt文件末尾的换行符/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019-09-07" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/07/2019-09-07/">2019-09-07</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/07/2019-09-07/" class="archive-article-date">
-  	<time datetime="2019-09-07T13:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h1><h2 id="1-今天工作了什么？"><a href="#1-今天工作了什么？" class="headerlink" title="1.今天工作了什么？"></a>1.今天工作了什么？</h2><ul>
-<li>1.1 </li>
-<li>1.2</li>
-</ul>
-<h2 id="2-收获了什么？"><a href="#2-收获了什么？" class="headerlink" title="2.收获了什么？"></a>2.收获了什么？</h2><ul>
-<li>2.1</li>
-<li>2.2</li>
-<li>2.3</li>
-</ul>
-<h2 id="3-达到昨天目标了吗？"><a href="#3-达到昨天目标了吗？" class="headerlink" title="3.达到昨天目标了吗？"></a>3.达到昨天目标了吗？</h2><ul>
-<li>3.1</li>
-<li>3.2</li>
-<li>3.3</li>
-</ul>
-<h2 id="4-明天的目标是什么？"><a href="#4-明天的目标是什么？" class="headerlink" title="4.明天的目标是什么？"></a>4.明天的目标是什么？</h2><ul>
-<li>4.1</li>
-<li>4.2</li>
-<li>4.3</li>
-</ul>
-<h2 id="5-近期的任务都有什么？"><a href="#5-近期的任务都有什么？" class="headerlink" title="5.近期的任务都有什么？"></a>5.近期的任务都有什么？</h2><ul>
-<li>5.1</li>
-<li>5.2</li>
-<li>5.3</li>
-</ul>
-<h2 id="6-对自己满意吗？"><a href="#6-对自己满意吗？" class="headerlink" title="6.对自己满意吗？"></a>6.对自己满意吗？</h2><ul>
-<li>6.1</li>
-<li>6.2</li>
-<li>6.3</li>
-</ul>
-<h2 id="7-建议"><a href="#7-建议" class="headerlink" title="7.建议"></a>7.建议</h2><ul>
-<li>7.1</li>
-<li>7.2</li>
-<li>7.3</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/daily//" class="article-tag-list-link color1">daily</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/07/2019-09-07/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2019-09-02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/2019-09-02/">2019-09-02</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/02/2019-09-02/" class="archive-article-date">
-  	<time datetime="2019-09-02T12:44:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h1><h2 id="1-今天工作了什么？"><a href="#1-今天工作了什么？" class="headerlink" title="1.今天工作了什么？"></a>1.今天工作了什么？</h2><ul>
-<li>1.1 </li>
-<li>1.2</li>
-</ul>
-<h2 id="2-收获了什么？"><a href="#2-收获了什么？" class="headerlink" title="2.收获了什么？"></a>2.收获了什么？</h2><ul>
-<li>2.1</li>
-<li>2.2</li>
-<li>2.3</li>
-</ul>
-<h2 id="3-达到昨天目标了吗？"><a href="#3-达到昨天目标了吗？" class="headerlink" title="3.达到昨天目标了吗？"></a>3.达到昨天目标了吗？</h2><ul>
-<li>3.1</li>
-<li>3.2</li>
-<li>3.3</li>
-</ul>
-<h2 id="4-明天的目标是什么？"><a href="#4-明天的目标是什么？" class="headerlink" title="4.明天的目标是什么？"></a>4.明天的目标是什么？</h2><ul>
-<li>4.1</li>
-<li>4.2</li>
-<li>4.3</li>
-</ul>
-<h2 id="5-近期的任务都有什么？"><a href="#5-近期的任务都有什么？" class="headerlink" title="5.近期的任务都有什么？"></a>5.近期的任务都有什么？</h2><ul>
-<li>5.1</li>
-<li>5.2</li>
-<li>5.3</li>
-</ul>
-<h2 id="6-对自己满意吗？"><a href="#6-对自己满意吗？" class="headerlink" title="6.对自己满意吗？"></a>6.对自己满意吗？</h2><ul>
-<li>6.1</li>
-<li>6.2</li>
-<li>6.3</li>
-</ul>
-<h2 id="7-建议"><a href="#7-建议" class="headerlink" title="7.建议"></a>7.建议</h2><ul>
-<li>7.1</li>
-<li>7.2</li>
-<li>7.3</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/daily//" class="article-tag-list-link color1">daily</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/2019-09-02/">展开全文 >></a>
         </p>
       
 
@@ -900,7 +1065,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">error</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -909,6 +1082,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">selenium</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
               </li>
              
               <li class="article-tag-list-item">

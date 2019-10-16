@@ -6,27 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://haoliuwide.github.io">
-  <title>hexo的主题配置 | MEM</title>
+  <title>排序 | MEM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.yilia主题下载">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="一 交换排序">
+<meta name="keywords" content="排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo的主题配置">
-<meta property="og:url" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/index.html">
+<meta property="og:title" content="排序">
+<meta property="og:url" content="https://haoliuwide.github.io/2019/10/15/排序/index.html">
 <meta property="og:site_name" content="MEM">
-<meta property="og:description" content="1.yilia主题下载">
+<meta property="og:description" content="一 交换排序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/1.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/2.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/3.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/4.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/5.png">
-<meta property="og:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/6.png">
-<meta property="og:updated_time" content="2019-08-21T12:42:50.489Z">
+<meta property="og:updated_time" content="2019-10-16T06:44:14.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo的主题配置">
-<meta name="twitter:description" content="1.yilia主题下载">
-<meta name="twitter:image" content="https://haoliuwide.github.io/2019/08/20/hexo的主题配置/1.png">
+<meta name="twitter:title" content="排序">
+<meta name="twitter:description" content="一 交换排序">
   
     <link rel="alternative" href="/atom.xml" title="MEM" type="application/atom+xml">
   
@@ -174,91 +167,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo的主题配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo的主题配置
+      排序
     </h1>
   
 
         
-        <a href="/2019/08/20/hexo的主题配置/" class="archive-article-date">
-  	<time datetime="2019-08-20T12:01:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+        <a href="/2019/10/15/排序/" class="archive-article-date">
+  	<time datetime="2019-10-15T08:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-yilia主题下载"><a href="#1-yilia主题下载" class="headerlink" title="1.yilia主题下载"></a>1.yilia主题下载</h1><a id="more"></a>
+        <h1 id="一-交换排序"><a href="#一-交换排序" class="headerlink" title="一 交换排序"></a>一 交换排序</h1><a id="more"></a>
 
-<p>​    下载yilia主题，保存到blog/themes下。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/Blog</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<h1 id="1-1-冒泡排序"><a href="#1-1-冒泡排序" class="headerlink" title="1. 1 冒泡排序"></a>1. 1 冒泡排序</h1><h3 id="描述："><a href="#描述：" class="headerlink" title="描述："></a>描述：</h3><p>比较相邻两个元素的的大小，如果反序（前一个元素大于后一个元素），交换两元素，每一趟将最大的数交换到当前趟的最后位置，就像气泡从水里冒出一样。</p>
+<h3 id="普通："><a href="#普通：" class="headerlink" title="普通："></a>普通：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">pop_sort</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; sort(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;num)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; num.size() - i; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (num[j] &lt; num[j - <span class="number">1</span>]) swap(num[j], num[j - <span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> num;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-站点配置文件修改"><a href="#2-站点配置文件修改" class="headerlink" title="2.站点配置文件修改"></a>2.站点配置文件修改</h1><h2 id="2-1-修改主题theme"><a href="#2-1-修改主题theme" class="headerlink" title="2.1 修改主题theme"></a>2.1 修改主题theme</h2><p>​    hexo博客的站点配置文件是_config.yml,路径就在 ~/Blog，将 其中的theme：lanscope 修改为 theme：yilia。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/Blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
+<h3 id="复杂度分析："><a href="#复杂度分析：" class="headerlink" title="复杂度分析："></a>复杂度分析：</h3><p>最好情况：数据序列完全有序，需要扫描n趟，每趟比较n-i-1次，共$n*(n-1)/2=O(n^2)$</p>
+<p>最坏情况：数据序列完全反序，仍然需要扫描n趟，每趟比较n-i-1次，共$n*(n-1)/2=O(n^2)$</p>
+<p>时间复杂度：$O(n^2)$</p>
+<p>元素交换时需要一个辅助空间</p>
+<p>空间复杂度：$O(1)$</p>
+<p>算法稳定（关键字重复下的排序性能）。</p>
+<h3 id="进阶："><a href="#进阶：" class="headerlink" title="进阶："></a>进阶：</h3><p>当某一趟没有发生元素交换，说明所有的元素均为正序，即可终止程序，避免之后无效的扫描。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">pop_sort</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; sort(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;num)</span><br><span class="line">	&#123;</span><br><span class="line">      	<span class="keyword">bool</span> exchange = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.size() &amp;&amp; exchange; i++)</span><br><span class="line">		&#123;</span><br><span class="line">            exchange = <span class="literal">false</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; num.size() - i; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (num[j] &lt; num[j - <span class="number">1</span>]) </span><br><span class="line">                &#123;</span><br><span class="line">                    swap(num[j], num[j - <span class="number">1</span>]);</span><br><span class="line">                 	exchange = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> num;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p><img src="1.png" alt></p>
-<h2 id="2-2-其他"><a href="#2-2-其他" class="headerlink" title="2.2 其他"></a>2.2 其他</h2><table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><code>title</code></td>
-<td align="left">网站标题</td>
-</tr>
-<tr>
-<td align="center"><code>subtitle</code></td>
-<td align="left">网站副标题（不积跬步，无以至千里）</td>
-</tr>
-<tr>
-<td align="center"><code>description</code></td>
-<td align="left">网站描述</td>
-</tr>
-<tr>
-<td align="center"><code>keywords</code></td>
-<td align="left">网站的关键词。使用半角逗号 <code>,</code> 分隔多个关键词。</td>
-</tr>
-<tr>
-<td align="center"><code>author</code></td>
-<td align="left">您的名字</td>
-</tr>
-<tr>
-<td align="center"><code>language</code></td>
-<td align="left">网站使用的语言（zh-CN：中文，en：英文）</td>
-</tr>
-<tr>
-<td align="center"><code>timezone</code></td>
-<td align="left">网站时区。默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
-</tr>
-</tbody></table>
-<p>其中，<code>description</code>主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。<code>author</code>参数用于主题显示文章的作者。更多详情，可通过<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">HEXO文档</a>查询。</p>
-<p><img src="2.png" alt></p>
-<h1 id="3-主题配置文件修改"><a href="#3-主题配置文件修改" class="headerlink" title="3.主题配置文件修改"></a>3.主题配置文件修改</h1><p>​    主题yilia的配置文件是~/Blog/themes/yilia/_config.yml</p>
-<h2 id="3-1-修改主题头像"><a href="#3-1-修改主题头像" class="headerlink" title="3.1 修改主题头像"></a>3.1 修改主题头像</h2><p>​    将自己心爱的图片设置为头像，只需两步。</p>
-<p><img src="3.png" alt></p>
-<h3 id="3-1-1-将图片放到-Blog-themes-yilia-source-img目录下"><a href="#3-1-1-将图片放到-Blog-themes-yilia-source-img目录下" class="headerlink" title="3.1.1 将图片放到~/Blog/themes/yilia/source/img目录下"></a>3.1.1 将图片放到~/Blog/themes/yilia/source/img目录下</h3><p><img src="4.png" alt></p>
-<h3 id="3-1-2-修改配置文件"><a href="#3-1-2-修改配置文件" class="headerlink" title="3.1.2 修改配置文件"></a>3.1.2 修改配置文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/Blog</span><br><span class="line">$ vim themes/yilia/_config.yml</span><br></pre></td></tr></table></figure>
+<h3 id="复杂度分析：-1"><a href="#复杂度分析：-1" class="headerlink" title="复杂度分析："></a>复杂度分析：</h3><p>最好情况：数据序列完全有序，需要扫描1趟，比较n-1次，共$(n-1)$次</p>
+<p>最坏情况：数据序列完全反序，仍然需要扫描n趟，每趟比较n-i-1次，共$n*(n-1)/2$次</p>
+<p>时间复杂度：$O(n)-O(n^2)$</p>
+<p>元素交换时需要一个辅助空间</p>
+<p>空间复杂度：$O(1)$</p>
+<p>算法稳定。</p>
+<h1 id="1-2-快速排序"><a href="#1-2-快速排序" class="headerlink" title="1.2 快速排序"></a>1.2 快速排序</h1><p>冒泡排序</p>
+<h3 id="描述：-1"><a href="#描述：-1" class="headerlink" title="描述："></a>描述：</h3><p>在数据序列中选择第一个数据作为基准，将小于基准的数据交换到基准值前面，大于基准的数据交换到基准值后面，因此序列被分为两部分（小于基准值，大于基准值），在分别对两个子序列进行快速排序。</p>
+<h3 id="普通：-1"><a href="#普通：-1" class="headerlink" title="普通："></a>普通：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">quick_sort</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sort_quick</span><span class="params">(<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp;num)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		sort_quick(num, <span class="number">0</span>, num.size() - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sort_quick</span><span class="params">(<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; num, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (left&gt;=<span class="number">0</span> &amp;&amp; left &lt; num.size() &amp;&amp; right &gt;=<span class="number">0</span> &amp;&amp; right &lt; num.size() &amp;&amp; left &lt; right)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> i = left;</span><br><span class="line">			<span class="keyword">int</span> j = right;</span><br><span class="line">			<span class="keyword">int</span> first_val = num[left];</span><br><span class="line">			<span class="keyword">while</span> (left!=right)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">while</span> (left &lt; right &amp;&amp; num[right] &gt; first_val) right--;</span><br><span class="line">				<span class="keyword">if</span> (left &lt; right) <span class="built_in">std</span>::swap(num[left++],num[right]);</span><br><span class="line">				<span class="keyword">while</span>(left&lt;right &amp;&amp; num[left] &lt;= first_val) left++;</span><br><span class="line">				<span class="keyword">if</span> (left &lt; right) <span class="built_in">std</span>::swap(num[left], num[right--]);</span><br><span class="line">			&#125;</span><br><span class="line">			sort_quick(num, i, left - <span class="number">1</span>);</span><br><span class="line">			sort_quick(num, left + <span class="number">1</span>, j);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p>​    将 avatar: 修改为 avatar: img/Lux.png</p>
-<p><img src="5.png" alt></p>
-<h2 id="3-2-Problem"><a href="#3-2-Problem" class="headerlink" title="3.2 Problem"></a>3.2 Problem</h2><p>​     用上述方法会出现，主页头像显示正常，但进入到博客文章内头像会挂掉的情况。<a href="https://github.com/kariyyahm" target="_blank" rel="noopener">Kari Wang </a>issue了这个问题，给出了以下解决方案：</p>
-<h3 id="3-2-1-Blog-resource下新建img文件夹，放入头像图片。"><a href="#3-2-1-Blog-resource下新建img文件夹，放入头像图片。" class="headerlink" title="3.2.1.Blog/resource下新建img文件夹，放入头像图片。"></a>3.2.1.Blog/resource下新建img文件夹，放入头像图片。</h3><h3 id="3-2-2-将-avatar-修改为-avatar-img-Lux-png"><a href="#3-2-2-将-avatar-修改为-avatar-img-Lux-png" class="headerlink" title="3.2.2.将 avatar: 修改为 avatar: /img/Lux.png"></a>3.2.2.将 avatar: 修改为 avatar: /img/Lux.png</h3><p>​    注意img前多了个 /，我尝试不要这个/，发现主页，文章内头像均不能正常显示。我猜测img文件夹在/目录下。</p>
-<h2 id="3-3-最终的方案"><a href="#3-3-最终的方案" class="headerlink" title="3.3 最终的方案"></a>3.3 最终的方案</h2><h3 id="3-3-1-将图片放到-Blog-themes-yilia-source-img目录下"><a href="#3-3-1-将图片放到-Blog-themes-yilia-source-img目录下" class="headerlink" title="3.3.1 将图片放到~/Blog/themes/yilia/source/img目录下"></a>3.3.1 将图片放到~/Blog/themes/yilia/source/img目录下</h3><h3 id="3-3-2-将-avatar-修改为-avatar-img-Lux-png"><a href="#3-3-2-将-avatar-修改为-avatar-img-Lux-png" class="headerlink" title="3.3.2.将 avatar: 修改为 avatar: /img/Lux.png"></a>3.3.2.将 avatar: 修改为 avatar: /img/Lux.png</h3><p>​        不需要在Blog/resource下新建img文件夹，其实hexo g 生成的文件为/img/Lux.png,它和放在yilia/source/img/Lux.png一致。而最终方案和3.1的区别看起来只是一个/，其实是相对路径和绝对路径的区别。在博客首页时，工作路径在/，所以无论绝对路径还是相对路径均可以正常显示。而点击其他page后，工作路径发生了变化，使得img/Lux.png这种方式失效了，/img/Lux.png的方式却能正确加载。</p>
-<h1 id="4-主题css文件修改"><a href="#4-主题css文件修改" class="headerlink" title="4.主题css文件修改"></a>4.主题css文件修改</h1><p>​    yilia主题的网页布局和~\Blog\themes\yilia\source\main.0cf68a.css 有关，因此可以配合浏览器的f12调试功能来修改该文件，获得想要的定义布局。这里我调整了侧边栏文字块之间的距离，在.left-col #header .header-menu {…}里添加了margin-top: 30px;  margin-bottom: 40px;</p>
-<p><img src="6.png" alt> </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.left-col <span class="comment">#header .header-menu &#123;</span></span><br><span class="line">  font-weight: 300;</span><br><span class="line">  line-height: 31px;</span><br><span class="line">  text-transform: uppercase;</span><br><span class="line">  <span class="built_in">float</span>: none;</span><br><span class="line">  min-height: 150px;</span><br><span class="line">  margin-top: 30px;                  <span class="comment"># 和”不积跬步，无以至千里“间隔30px</span></span><br><span class="line">  margin-bottom: 40px;				 <span class="comment">#  和”所有文章/友链/关于我“间隔40px				</span></span><br><span class="line">  margin-left: -12px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  -webkit-box-orient: horizontal;</span><br><span class="line">  -webkit-box-pack: center;</span><br><span class="line">  -webkit-box-align: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="5-hexo三连"><a href="#5-hexo三连" class="headerlink" title="5.hexo三连"></a>5.hexo三连</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
+<h3 id="复杂度分析：-2"><a href="#复杂度分析：-2" class="headerlink" title="复杂度分析："></a>复杂度分析：</h3><p>快速排序的一次划分算法从两头交替搜索，直到left和right重合，因此其时间复杂度是O(n)；而整个快速排序算法的时间复杂度与划分的趟数有关。</p>
+<p>最好情况：每次划分所选择的中间数恰好将当前序列几乎等分，经过log2n趟划分，便可得到长度为1的子表。这样，整个算法的时间复杂度为$O(n*log_2n)$</p>
+<p>最坏情况：每次所选的中间数是当前序列中的最大或最小元素，这使得每次划分所得的子表中一个为空表，另一子表的长度为原表的长度-1。这样，长度为n的数据表的快速排序需要经过n趟划分，使得整个排序算法的时间复杂度为$O(n^2)$</p>
+<p>时间复杂度：$O(n*log_2n)\sim O(n^2)$</p>
+<p>尽管快速排序只需要一个元素的辅助空间，但快速排序需要一个栈空间来实现递归。最好的情况下，即快速排序的每一趟排序都将元素序列均匀地分割成长度相近的两个子表，所需栈的最大深度为$log_2(n+1)$；但最坏的情况下，栈的最大深度为$n$ </p>
+<p>空间复杂度：$O(log_2n)\sim O(n)$</p>
+<p> 两个循环在进行元素比较时，分别用了大于(&gt;)和小于(&lt;=)等于操作。从后往前扫描时，如果出现和基准值相同的元素，它都会被作为交换对象而移动到基准值的前面，这就出现了值相同的元素顺序交换的问题，因而是不稳定的。 </p>
+<p>算法不稳定。</p>
+<h3 id="进阶：-1"><a href="#进阶：-1" class="headerlink" title="进阶："></a>进阶：</h3><p> 对于分治算法，当每次划分时，算法若都能分成两个等长的子序列时，那么分治算法效率会达到最大。也就是说，基准的选择是很重要的。选择基准的方式决定了两个分割后两个子序列的长度，进而对整个算法的效率产生决定性影响。</p>
+<p>三数取中法（取left，mid，right的中间值）</p>
+<p>STL自带的sort方法也是改进的快速排序。三数取中+自检机制（运行中若检测到算法恶化，转化为堆排序）</p>
+<h1 id="二-插入排序"><a href="#二-插入排序" class="headerlink" title="二 插入排序"></a>二 插入排序</h1><p>插入排序(Insertion Sort)的算法思想：每趟将一个元素，按其关键字值的大小插入到它前面已排序的子序列中，依此重复，直到插入全部元素。</p>
+<h2 id="2-1-直接插入排序"><a href="#2-1-直接插入排序" class="headerlink" title="2.1 直接插入排序"></a>2.1 直接插入排序</h2><h3 id="描述：-2"><a href="#描述：-2" class="headerlink" title="描述："></a>描述：</h3>
       
 
       
@@ -292,7 +257,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
         		</li>
       		
 		</ul>
@@ -359,7 +324,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://haoliuwide.github.io/2019/08/20/hexo的主题配置/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://haoliuwide.github.io/2019/10/15/排序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -373,18 +338,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/20/hexo添加分类功能/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo添加分类功能
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/20/windows10下的hexo安装/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows下的hexo安装</div>
+    <a href="/2019/09/30/error/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">error</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -411,7 +367,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-yilia主题下载"><span class="toc-number">1.</span> <span class="toc-text">1.yilia主题下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-站点配置文件修改"><span class="toc-number">2.</span> <span class="toc-text">2.站点配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-修改主题theme"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 修改主题theme</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-其他"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-主题配置文件修改"><span class="toc-number">3.</span> <span class="toc-text">3.主题配置文件修改</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-修改主题头像"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 修改主题头像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-将图片放到-Blog-themes-yilia-source-img目录下"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1 将图片放到~/Blog/themes/yilia/source/img目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-修改配置文件"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2 修改配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Problem"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Problem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Blog-resource下新建img文件夹，放入头像图片。"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1.Blog/resource下新建img文件夹，放入头像图片。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-将-avatar-修改为-avatar-img-Lux-png"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2.将 avatar: 修改为 avatar: /img/Lux.png</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-最终的方案"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 最终的方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-将图片放到-Blog-themes-yilia-source-img目录下"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 将图片放到~/Blog/themes/yilia/source/img目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-将-avatar-修改为-avatar-img-Lux-png"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2.将 avatar: 修改为 avatar: /img/Lux.png</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-主题css文件修改"><span class="toc-number">4.</span> <span class="toc-text">4.主题css文件修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-hexo三连"><span class="toc-number">5.</span> <span class="toc-text">5.hexo三连</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-交换排序"><span class="toc-number">1.</span> <span class="toc-text">一 交换排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-1-冒泡排序"><span class="toc-number">2.</span> <span class="toc-text">1. 1 冒泡排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#描述："><span class="toc-number">2.0.1.</span> <span class="toc-text">描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#普通："><span class="toc-number">2.0.2.</span> <span class="toc-text">普通：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度分析："><span class="toc-number">2.0.3.</span> <span class="toc-text">复杂度分析：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶："><span class="toc-number">2.0.4.</span> <span class="toc-text">进阶：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度分析：-1"><span class="toc-number">2.0.5.</span> <span class="toc-text">复杂度分析：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-2-快速排序"><span class="toc-number">3.</span> <span class="toc-text">1.2 快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#描述：-1"><span class="toc-number">3.0.1.</span> <span class="toc-text">描述：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#普通：-1"><span class="toc-number">3.0.2.</span> <span class="toc-text">普通：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度分析：-2"><span class="toc-number">3.0.3.</span> <span class="toc-text">复杂度分析：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶：-1"><span class="toc-number">3.0.4.</span> <span class="toc-text">进阶：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-插入排序"><span class="toc-number">4.</span> <span class="toc-text">二 插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-直接插入排序"><span class="toc-number">4.1.</span> <span class="toc-text">2.1 直接插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#描述：-2"><span class="toc-number">4.1.1.</span> <span class="toc-text">描述：</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
