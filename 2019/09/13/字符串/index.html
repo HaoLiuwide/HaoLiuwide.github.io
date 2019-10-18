@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://haoliuwide.github.io">
   <title>字符串 | MEM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.1 字符串的旋转题目：单词翻转说明：输入一个英文句子，翻转句子中单词的顺序。样例：“I am a student.”  -&amp;gt; “student. a am I”1234567891011121314151617181920212223242526272829void reverse_string(char* s, int from, int to)&amp;#123;	while (fr">
+  <meta name="description" content="字符串">
 <meta name="keywords" content="算法,字符串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串">
 <meta property="og:url" content="https://haoliuwide.github.io/2019/09/13/字符串/index.html">
 <meta property="og:site_name" content="MEM">
-<meta property="og:description" content="1.1 字符串的旋转题目：单词翻转说明：输入一个英文句子，翻转句子中单词的顺序。样例：“I am a student.”  -&amp;gt; “student. a am I”1234567891011121314151617181920212223242526272829void reverse_string(char* s, int from, int to)&amp;#123;	while (fr">
+<meta property="og:description" content="字符串">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-15T04:33:31.556Z">
+<meta property="og:updated_time" content="2019-10-18T05:35:14.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串">
-<meta name="twitter:description" content="1.1 字符串的旋转题目：单词翻转说明：输入一个英文句子，翻转句子中单词的顺序。样例：“I am a student.”  -&amp;gt; “student. a am I”1234567891011121314151617181920212223242526272829void reverse_string(char* s, int from, int to)&amp;#123;	while (fr">
+<meta name="twitter:description" content="字符串">
   
     <link rel="alternative" href="/atom.xml" title="MEM" type="application/atom+xml">
   
@@ -187,9 +187,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-
-
+        <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><a id="more"></a>
 
 <h2 id="1-1-字符串的旋转"><a href="#1-1-字符串的旋转" class="headerlink" title="1.1 字符串的旋转"></a>1.1 字符串的旋转</h2><h3 id="题目：单词翻转"><a href="#题目：单词翻转" class="headerlink" title="题目：单词翻转"></a>题目：单词翻转</h3><h3 id="说明：输入一个英文句子，翻转句子中单词的顺序。"><a href="#说明：输入一个英文句子，翻转句子中单词的顺序。" class="headerlink" title="说明：输入一个英文句子，翻转句子中单词的顺序。"></a>说明：输入一个英文句子，翻转句子中单词的顺序。</h3><h3 id="样例：“I-am-a-student-”-gt-“student-a-am-I”"><a href="#样例：“I-am-a-student-”-gt-“student-a-am-I”" class="headerlink" title="样例：“I am a student.”  -&gt; “student. a am I”"></a>样例：“I am a student.”  -&gt; “student. a am I”</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse_string</span><span class="params">(<span class="keyword">char</span>* s, <span class="keyword">int</span> from, <span class="keyword">int</span> to)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (from &lt; to)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">char</span> t = s[to];</span><br><span class="line">		s[to--] = s[from];</span><br><span class="line">		s[from++] = t;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reverse_sentense</span><span class="params">(<span class="keyword">char</span>* s,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> from = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> to = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (from &lt; n &amp;&amp; to &lt; n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (s[to] == <span class="string">' '</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			reverse_string(s, from, to - <span class="number">1</span>);</span><br><span class="line">			from = to + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (to == n - <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			reverse_string(s, from, to);</span><br><span class="line">			from = to + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		++to;</span><br><span class="line">	&#125;</span><br><span class="line">	reverse_string(s, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -368,7 +366,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-字符串的旋转"><span class="toc-number">1.</span> <span class="toc-text">1.1 字符串的旋转</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目：单词翻转"><span class="toc-number">1.1.</span> <span class="toc-text">题目：单词翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明：输入一个英文句子，翻转句子中单词的顺序。"><span class="toc-number">1.2.</span> <span class="toc-text">说明：输入一个英文句子，翻转句子中单词的顺序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例：“I-am-a-student-”-gt-“student-a-am-I”"><span class="toc-number">1.3.</span> <span class="toc-text">样例：“I am a student.”  -&gt; “student. a am I”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-字符串的包含"><span class="toc-number">2.</span> <span class="toc-text">1.2 字符串的包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用位运算把一个整数当作散列表。最多保存32个。"><span class="toc-number">2.1.</span> <span class="toc-text">利用位运算把一个整数当作散列表。最多保存32个。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目：变位词"><span class="toc-number">2.2.</span> <span class="toc-text">题目：变位词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。"><span class="toc-number">2.3.</span> <span class="toc-text">说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例：“bad”-“abd”-为兄弟字符串"><span class="toc-number">2.4.</span> <span class="toc-text">样例：“bad”  “abd” 为兄弟字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-字符串的全排列"><span class="toc-number">3.</span> <span class="toc-text">1.3 字符串的全排列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目：单词翻转-1"><span class="toc-number">3.1.</span> <span class="toc-text">题目：单词翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明：输入一个英文句子，翻转句子中单词的顺序。-1"><span class="toc-number">3.2.</span> <span class="toc-text">说明：输入一个英文句子，翻转句子中单词的顺序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例：“I-am-a-student-”-gt-“student-a-am-I”-1"><span class="toc-number">3.3.</span> <span class="toc-text">样例：“I am a student.”  -&gt; “student. a am I”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-回文判断"><span class="toc-number">3.4.</span> <span class="toc-text">1.5 回文判断</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#快慢指针"><span class="toc-number">3.4.1.</span> <span class="toc-text">快慢指针</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本章习题"><span class="toc-number">3.5.</span> <span class="toc-text">本章习题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-字符串反转"><span class="toc-number">3.5.1.</span> <span class="toc-text">1. 字符串反转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-字符的左右移动"><span class="toc-number">3.5.2.</span> <span class="toc-text">2. 字符的左右移动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-字符个数的统计"><span class="toc-number">3.5.3.</span> <span class="toc-text">3. 字符个数的统计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-字符串的匹配"><span class="toc-number">3.5.4.</span> <span class="toc-text">4. 字符串的匹配</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#字符串"><span class="toc-number">1.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-字符串的旋转"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 字符串的旋转</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目：单词翻转"><span class="toc-number">1.1.1.</span> <span class="toc-text">题目：单词翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明：输入一个英文句子，翻转句子中单词的顺序。"><span class="toc-number">1.1.2.</span> <span class="toc-text">说明：输入一个英文句子，翻转句子中单词的顺序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例：“I-am-a-student-”-gt-“student-a-am-I”"><span class="toc-number">1.1.3.</span> <span class="toc-text">样例：“I am a student.”  -&gt; “student. a am I”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-字符串的包含"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 字符串的包含</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用位运算把一个整数当作散列表。最多保存32个。"><span class="toc-number">1.2.1.</span> <span class="toc-text">利用位运算把一个整数当作散列表。最多保存32个。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#题目：变位词"><span class="toc-number">1.2.2.</span> <span class="toc-text">题目：变位词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。"><span class="toc-number">1.2.3.</span> <span class="toc-text">说明：如果两个字符串的字符一样，出现的次数也一样，只是出现的顺序不一样，则认为这两个字符串为兄弟字符串。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例：“bad”-“abd”-为兄弟字符串"><span class="toc-number">1.2.4.</span> <span class="toc-text">样例：“bad”  “abd” 为兄弟字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-字符串的全排列"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 字符串的全排列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题目：单词翻转-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">题目：单词翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明：输入一个英文句子，翻转句子中单词的顺序。-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">说明：输入一个英文句子，翻转句子中单词的顺序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例：“I-am-a-student-”-gt-“student-a-am-I”-1"><span class="toc-number">1.3.3.</span> <span class="toc-text">样例：“I am a student.”  -&gt; “student. a am I”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-回文判断"><span class="toc-number">1.3.4.</span> <span class="toc-text">1.5 回文判断</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#快慢指针"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">快慢指针</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本章习题"><span class="toc-number">1.3.5.</span> <span class="toc-text">本章习题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-字符串反转"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">1. 字符串反转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-字符的左右移动"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">2. 字符的左右移动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-字符个数的统计"><span class="toc-number">1.3.5.3.</span> <span class="toc-text">3. 字符个数的统计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-字符串的匹配"><span class="toc-number">1.3.5.4.</span> <span class="toc-text">4. 字符串的匹配</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -480,11 +478,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">errors</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">error</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,14 +507,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
