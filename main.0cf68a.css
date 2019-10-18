@@ -1,4 +1,4 @@
-.clearfix:after,
+/.clearfix:after,
 .clearfix:before {
   content: "";
   display: table
@@ -2773,7 +2773,7 @@ pre .id {
 }
 
 .jump-container:hover .icon-back {
-  background: rgba(36, 193, 246, .9)
+  background: rgb(77,77,77)
 }
 
 .jump-container,
@@ -2829,7 +2829,7 @@ pre .id {
 }
 
 .toc-container.tooltip-left:hover {
-  background: rgba(36, 193, 246, .9)
+  background: rgb(77,77,77)
 }
 
 .toc-container.tooltip-left .icon-font {
