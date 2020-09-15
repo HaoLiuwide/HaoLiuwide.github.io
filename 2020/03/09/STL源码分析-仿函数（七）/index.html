@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="MEM">
 <meta property="og:description" content="仿函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-09T10:59:00.942Z">
+<meta property="og:updated_time" content="2020-03-09T11:18:09.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="STL源码分析-仿函数 (七)">
 <meta name="twitter:description" content="仿函数">
@@ -189,12 +189,8 @@
       
         <h1 id="仿函数"><a href="#仿函数" class="headerlink" title="仿函数"></a>仿函数</h1><a id="more"></a>
 <p>仿函数可以按照需要的参数个数分成两类：</p>
-<ol>
-<li><p>一元函数 unary_function</p>
-</li>
-<li><p>二元函数 binary_function</p>
-</li>
-</ol>
+<p>（1）一元函数 unary_function</p>
+<p>（2）二元函数 binary_function</p>
 <p><strong>使用方法：继承unary_function或者binary_function，然后重载操作符()即可。</strong></p>
 <h2 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//STL规定的unary_function，每一个一元仿函数都应继承此类别</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Arg, <span class="keyword">typename</span> Result&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">unary_function</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">using</span> argument_type = Arg;</span><br><span class="line">    <span class="keyword">using</span> result_type = Result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//STL规定的binary_function，每一个二元仿函数都应继承此类别</span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Arg1,<span class="keyword">typename</span> Arg2, <span class="keyword">typename</span> Result&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">binary_function</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">using</span> first_argument_type = Arg1;</span><br><span class="line">    <span class="keyword">using</span> second_argument_type = Arg2;</span><br><span class="line">    <span class="keyword">using</span> result_type = Result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如何使用？</p>
